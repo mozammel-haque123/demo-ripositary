@@ -42,7 +42,7 @@ const Slaider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[700px]">
+    <div className="relative w-full h-[700px] overflow-hidden">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         {/* ✅ Background image */}
         <div

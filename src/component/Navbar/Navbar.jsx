@@ -39,178 +39,175 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white mb-6 mt-8 relative border-red-500 border-2">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img src={navlogo} alt="Logo" className="h-8 w-40" />
-          </div>
+    <nav className="bg-white mb-6 mt-8 relative">
+      <div className="flex justify-between h-16 items-center">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src={navlogo} alt="Logo" className="h-8 w-40" />
+        </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            {/* Home */}
-            <div
-              onMouseEnter={() => handleEnter(homeTimer, setOpenHome)}
-              onMouseLeave={() => handleLeave(homeTimer, setOpenHome)}
-              className=""
-            >
-              <NavLink className="flex items-center font-bold hover:text-blue-600">
-                Home <RiArrowDropDownLine className="ml-1 text-2xl" />
-              </NavLink>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-6">
+          {/* Home */}
+          <div
+            onMouseEnter={() => handleEnter(homeTimer, setOpenHome)}
+            onMouseLeave={() => handleLeave(homeTimer, setOpenHome)}
+          >
+            <NavLink className="flex items-center font-bold hover:text-blue-600">
+              Home <RiArrowDropDownLine className="ml-1 text-2xl" />
+            </NavLink>
 
-              {openHome && (
-                <div className="absolute mt-2 w-full left-0 p-4 rounded shadow-lg z-20 flex justify-center">
-                  <Hover1 />
-                </div>
-              )}
+            {openHome && (
+              <div className="absolute mt-2 w-full left-0 p-4 z-20 flex justify-center">
+                <Hover1 />
+              </div>
+            )}
 
-              {/* {openHome && (
+            {/* {openHome && (
                 <div className="absolute top-9 left-1/2 -translate-x-1/4 mt-2 bg-white p-4 rounded shadow-lg z-20">
                   <Hover1 />
                 </div>
               )} */}
-            </div>
-
-            {/* Pages and nested Products */}
-            <div
-              onMouseEnter={() => handleEnter(pagesTimer, setOpenPages)}
-              onMouseLeave={() => handleLeave(pagesTimer, setOpenPages)}
-              className="relative"
-            >
-              <NavLink className="flex items-center font-semibold hover:text-blue-600">
-                Pages <RiArrowDropDownLine className="ml-1 text-2xl" />
-              </NavLink>
-              {openPages && (
-                <div className="absolute top-full mt-2 bg-white p-4 rounded shadow-lg z-20 w-48">
-                  <ul className="space-y-2">
-                    <li className="hover:text-blue-600">About Us</li>
-                    <li className="hover:text-blue-600">Contact</li>
-                    <li className="hover:text-blue-600">FAQ</li>
-                    <li className="hover:text-blue-600">Terms & Conditions</li>
-                    {/* Nested Products */}
-                    <li className="pt-2 border-t border-gray-200">
-                      <div
-                        onMouseEnter={() => handleEnter(productsTimer, setProducts)}
-                        onMouseLeave={() => handleLeave(productsTimer, setProducts)}
-                        className="relative"
-                      >
-                        <div className="flex items-center cursor-pointer hover:text-blue-600">
-                          Products <RiArrowDropDownLine className="ml-1 text-xl" />
-                        </div>
-                        {openProducts && (
-                          <div className="absolute left-full top-0 ml-2 bg-white p-4 rounded shadow-lg w-40">
-                            <ul className="space-y-2">
-                              <li className="hover:text-blue-600">Category 1</li>
-                              <li className="hover:text-blue-600">Category 2</li>
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </div>
-
-            {/* Shop */}
-            <div
-              onMouseEnter={() => handleEnter(productsTimer, setShop)}
-              onMouseLeave={() => handleLeave(productsTimer, setShop)}
-              className="relative"
-            >
-              <NavLink className="flex items-center font-semibold hover:text-blue-600">
-                Shop <RiArrowDropDownLine className="ml-1 text-2xl" />
-              </NavLink>
-              {openShop && (
-                <div className="absolute top-full mt-2 bg-white p-4 rounded shadow-lg z-20 w-40">
-                  <ul className="space-y-2">
-                    <li className="hover:text-blue-600">Shop</li>
-                    <li className="hover:text-blue-600">Product Details</li>
-                  </ul>
-                </div>
-              )}
-              <img className="w-15 absolute -top-10 hidden md:block" src={news} alt="news" />
-            </div>
-
-            {/* Blogs */}
-            <div
-              onMouseEnter={() => handleEnter(blogsTimer, setBlogs)}
-              onMouseLeave={() => handleLeave(blogsTimer, setBlogs)}
-              className="relative"
-            >
-              <NavLink className="flex items-center font-semibold hover:text-blue-600">
-                Blogs <RiArrowDropDownLine className="ml-1 text-2xl" />
-              </NavLink>
-              {openBlogs && (
-                <div className="absolute top-full mt-2 bg-white p-4 rounded shadow-lg z-20 w-40">
-                  <ul className="space-y-2">
-                    <li className="hover:text-blue-600">Blog</li>
-                    <li className="hover:text-blue-600">Single Blog</li>
-                  </ul>
-                </div>
-              )}
-            </div>
-
-            {/* Gallery */}
-            <div
-              onMouseEnter={() => handleEnter(galleryTimer, setGallery)}
-              onMouseLeave={() => handleLeave(galleryTimer, setGallery)}
-            >
-              <NavLink className="flex items-center font-semibold hover:text-blue-600">
-                Gallery <RiArrowDropDownLine className="ml-1 text-2xl" />
-              </NavLink>
-
-              {openGallery && (
-                <div className="absolute mt-2 w-full left-0 z-20">
-                  <Hover2 />
-                </div>
-              )}
-
-              <img className="w-15 absolute -top-10 hidden md:block" src={hot} alt="news" />
-            </div>
-
-            {/* Donate / Icons */}
-            <button className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600">
-              Donate{" "}
-              <RiArrowDropDownLine
-                className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
-  "
-              />{" "}
-            </button>
           </div>
 
-          {/* Icons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Pages and nested Products */}
+          <div
+            onMouseEnter={() => handleEnter(pagesTimer, setOpenPages)}
+            onMouseLeave={() => handleLeave(pagesTimer, setOpenPages)}
+            className="relative"
+          >
+            <NavLink className="flex items-center font-semibold hover:text-blue-600">
+              Pages <RiArrowDropDownLine className="ml-1 text-2xl" />
+            </NavLink>
+            {openPages && (
+              <div className="absolute top-full mt-2 bg-white p-4 rounded shadow-lg z-20 w-48">
+                <ul className="space-y-2">
+                  <li className="hover:text-blue-600">About Us</li>
+                  <li className="hover:text-blue-600">Contact</li>
+                  <li className="hover:text-blue-600">FAQ</li>
+                  <li className="hover:text-blue-600">Terms & Conditions</li>
+                  {/* Nested Products */}
+                  <li className="pt-2 border-t border-gray-200">
+                    <div
+                      onMouseEnter={() => handleEnter(productsTimer, setProducts)}
+                      onMouseLeave={() => handleLeave(productsTimer, setProducts)}
+                      className="relative"
+                    >
+                      <div className="flex items-center cursor-pointer hover:text-blue-600">
+                        Products <RiArrowDropDownLine className="ml-1 text-xl" />
+                      </div>
+                      {openProducts && (
+                        <div className="absolute left-full top-0 ml-2 bg-white p-4 rounded shadow-lg w-40">
+                          <ul className="space-y-2">
+                            <li className="hover:text-blue-600">Category 1</li>
+                            <li className="hover:text-blue-600">Category 2</li>
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Shop */}
+          <div
+            onMouseEnter={() => handleEnter(productsTimer, setShop)}
+            onMouseLeave={() => handleLeave(productsTimer, setShop)}
+            className="relative"
+          >
+            <NavLink className="flex items-center font-semibold hover:text-blue-600">
+              Shop <RiArrowDropDownLine className="ml-1 text-2xl" />
+            </NavLink>
+            {openShop && (
+              <div className="absolute top-full mt-2 bg-white p-4 rounded shadow-lg z-20 w-40">
+                <ul className="space-y-2">
+                  <li className="hover:text-blue-600">Shop</li>
+                  <li className="hover:text-blue-600">Product Details</li>
+                </ul>
+              </div>
+            )}
+            <img className="w-15 absolute -top-10 hidden md:block" src={news} alt="news" />
+          </div>
+
+          {/* Blogs */}
+          <div
+            onMouseEnter={() => handleEnter(blogsTimer, setBlogs)}
+            onMouseLeave={() => handleLeave(blogsTimer, setBlogs)}
+            className="relative"
+          >
+            <NavLink className="flex items-center font-semibold hover:text-blue-600">
+              Blogs <RiArrowDropDownLine className="ml-1 text-2xl" />
+            </NavLink>
+            {openBlogs && (
+              <div className="absolute top-full mt-2 bg-white p-4 rounded shadow-lg z-20 w-40">
+                <ul className="space-y-2">
+                  <li className="hover:text-blue-600">Blog</li>
+                  <li className="hover:text-blue-600">Single Blog</li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Gallery */}
+          <div
+            onMouseEnter={() => handleEnter(galleryTimer, setGallery)}
+            onMouseLeave={() => handleLeave(galleryTimer, setGallery)}
+          >
+            <NavLink className="flex items-center font-semibold hover:text-blue-600">
+              Gallery <RiArrowDropDownLine className="ml-1 text-2xl" />
+            </NavLink>
+
+            {openGallery && (
+              <div className="absolute mt-2 w-full left-0 p-4 z-20 flex justify-center">
+                <Hover2 />
+              </div>
+            )}
+
+            <img className="w-15 absolute -top-10 hidden md:block" src={hot} alt="news" />
+          </div>
+
+          {/* Donate / Icons */}
+          <button className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600">
+            Donate{" "}
+            <RiArrowDropDownLine
+              className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
+  "
+            />{" "}
+          </button>
+        </div>
+
+        {/* Icons */}
+        <div className="hidden md:flex items-center space-x-4">
+          <div className="relative">
+            <GiSelfLove className="text-4xl" />
+            <span className="absolute -top-1 -right-2 bg-gray-200 rounded-full w-4 h-4 text-xs text-center">0</span>
+          </div>
+          <div className="relative">
+            <MdOutlineShoppingBag className="text-4xl" />
+            <span className="absolute -top-1 -right-2 bg-amber-300 rounded-full w-4 h-4 text-xs text-white text-center">
+              0
+            </span>
+          </div>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="flex md:hidden">
+          <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2 focus:outline-none mr-20">
+            {mobileOpen ? <RiCloseLine className="text-2xl" /> : <RiMenuLine className="text-2xl" />}
+          </button>
+
+          <div className="flex items-center space-x-4 pt-2">
             <div className="relative">
-              <GiSelfLove className="text-4xl" />
+              <GiSelfLove className="text-2xl" />
               <span className="absolute -top-1 -right-2 bg-gray-200 rounded-full w-4 h-4 text-xs text-center">0</span>
             </div>
             <div className="relative">
-              <MdOutlineShoppingBag className="text-4xl" />
+              <MdOutlineShoppingBag className="text-2xl" />
               <span className="absolute -top-1 -right-2 bg-amber-300 rounded-full w-4 h-4 text-xs text-white text-center">
                 0
               </span>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="flex md:hidden">
-            <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2 focus:outline-none mr-20">
-              {mobileOpen ? <RiCloseLine className="text-2xl" /> : <RiMenuLine className="text-2xl" />}
-            </button>
-
-            <div className="flex items-center space-x-4 pt-2">
-              <div className="relative">
-                <GiSelfLove className="text-2xl" />
-                <span className="absolute -top-1 -right-2 bg-gray-200 rounded-full w-4 h-4 text-xs text-center">0</span>
-              </div>
-              <div className="relative">
-                <MdOutlineShoppingBag className="text-2xl" />
-                <span className="absolute -top-1 -right-2 bg-amber-300 rounded-full w-4 h-4 text-xs text-white text-center">
-                  0
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -219,7 +216,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
 
       <div
-        className={`border-2 border-amber-500 w-[320px] transform fixed top-[120px] left-0 z-50 bg-white ${
+        className={`border-2 border-amber-500 w-[320px] transform fixed top-[120px] left-0 z-50 bg-white overflow-hidden ${
           !mobileOpen ? "-translate-x-[320px]" : ""
         } transition ease-in-out duration-300`}
       >
