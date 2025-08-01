@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp, MdMenu, MdSearch } from "react-icons/md";
+import { RiArrowDropUpLine } from "react-icons/ri";
 
 const HeaderSearch = () => {
   const [catOpen, setCatOpen] = useState(false);
@@ -46,7 +47,7 @@ const HeaderSearch = () => {
         </button>
 
         {catOpen && (
-          <ul className="absolute mt-2 bg-white shadow-lg rounded-lg 30 w-90 z-15">
+          <ul className="absolute mt-2 bg-white shadow-lg rounded-lg 30 w-90 z-15 w-full">
             <li
               className="flex justify-between items-center px-6"
               onMouseEnter={() => handleEnter(electronicsTimer, setElectronics)}
@@ -63,7 +64,7 @@ const HeaderSearch = () => {
               />
               {electronics && (
                 <div className="absolute top-1 left-90 mt-2">
-                  <MegaMenu1></MegaMenu1>
+                  <MegaMenu1 />
                 </div>
               )}
             </li>

@@ -42,7 +42,7 @@ const Slaider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[700px] overflow-hidden">
+    <div className="relative w-full h-[700px] ">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         {/* ✅ Background image */}
         <div
@@ -55,7 +55,7 @@ const Slaider = () => {
           {/* ✅ Overlay content */}
           <div className="w-full h-full slaidBg">
             {/* ✅ Slide Text Center */}
-            <div className="h-full flex flex-col justify-center items-center text-white text-center px-4">
+            <div className="h-full flex flex-col justify-center items-center text-white text-center px-4 w-[80%] mx-auto overflow-hidden">
               <h1
                 className="
                   text-4xl md:text-6xl font-bold mb-4
@@ -72,6 +72,7 @@ const Slaider = () => {
               >
                 {slides[current].description}
               </p>
+
               <div className="flex">
                 <button
                   className="
@@ -116,8 +117,7 @@ const Slaider = () => {
             <img src={banar} alt="Banner" className="block w-full h-[350px] object-cover" />
             {/* sweeping white overlay */}
             <span
-              className="
-      absolute inset-0
+              className="absolute inset-0
       w-[390%] h-[200%]
       bg-white opacity-40
       transform rotate-45 translate-x-full -translate-y-full
