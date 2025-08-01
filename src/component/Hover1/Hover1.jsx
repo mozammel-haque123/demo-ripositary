@@ -10,18 +10,11 @@ const Hover1 = () => {
   }, []);
 
   return (
-    <div className="w-full lg:w-[1000px] md:w-[500px] md:h-auto">
+    <div className="w-full lg:w-[1000px] md:w-[500px] md:h-auto bg-white p-4 shadow-lg max-h-[600px] overflow-y-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {datas.map((d, idx) => (
-          <div
-            key={idx}
-            className="text-center shadow-md p-2 rounded bg-white"
-          >
-            <img
-              src={d.img}
-              alt={d.name}
-              className="w-full h-48 sm:h-56 md:h-60 lg:h-72 object-cover rounded"
-            />
+          <div key={idx} className="text-center shadow-md p-2 rounded bg-white">
+            <img src={d.img} alt={d.name} className="w-full h-48 sm:h-56 md:h-60 lg:h-72 object-cover rounded" />
             <p className="text-sm mt-2 truncate">{d.name}</p>
           </div>
         ))}
@@ -31,11 +24,6 @@ const Hover1 = () => {
 };
 
 export default Hover1;
-
-
-
-
-
 
 // const Hover1 = () => {
 //   const [datas, setDatas] = useState([]);
@@ -59,6 +47,5 @@ export default Hover1;
 //     </div>
 //   );
 // };
-
 
 // export default Hover1;

@@ -1,10 +1,10 @@
+import "animate.css/animate.min.css"; // Animate.css ইমপোর্ট
 import { useEffect, useState } from "react";
-import "animate.css/animate.min.css";        // Animate.css ইমপোর্ট
+import banar from "../../assets/banner.png";
+import campaign from "../../assets/campaign.jpg";
 import egypt from "../../assets/egypt.jpg";
 import fs from "../../assets/fs.jpg";
 import nfs from "../../assets/nfs.jpg";
-import banar from '../../assets/banner.png';
-import campaign from '../../assets/campaign.jpg';
 
 // স্লাইড ডেটা
 const slides = [
@@ -46,7 +46,7 @@ const Slaider = () => {
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         {/* ✅ Background image */}
         <div
-          key={current}  // remount করে Animate.css ক্লাসগুলো প্রতিবার চালাবে
+          key={current} // remount করে Animate.css ক্লাসগুলো প্রতিবার চালাবে
           className="w-full h-[700px] bg-cover bg-center transition-all duration-1000"
           style={{
             backgroundImage: `url(${slides[current].image})`,
@@ -59,7 +59,7 @@ const Slaider = () => {
               <h1
                 className="
                   text-4xl md:text-6xl font-bold mb-4
-                  animate__animated animate__fadeInLeft animate__slower animate__delay-1s
+                  animate__animated animate__slideInLeft animate__slower animate__delay-1s
                 "
               >
                 {slides[current].title}
@@ -67,7 +67,7 @@ const Slaider = () => {
               <p
                 className="
                   text-lg md:text-2xl mb-6 max-w-6xl
-                  animate__animated animate__fadeInLeft animate__slower animate__delay-2s
+                  animate__animated animate__slideInLeft animate__slower animate__delay-2s
                 "
               >
                 {slides[current].description}
@@ -79,7 +79,7 @@ const Slaider = () => {
                    border-2
                    text-blue-700 font-bold
                     btn btn-outline btn-sm md:btn-md border-blue-600 hover:bg-black hover:text-white transition
-                    animate__animated animate__fadeInLeft animate__slower animate__delay-3s
+                    animate__animated animate__slideInLeft animate__slower animate__delay-3s
                   "
                 >
                   {slides[current].buttonText1}
@@ -112,15 +112,11 @@ const Slaider = () => {
         </div>
 
         <div className="flex flex-col gap-4 mt-14">
-         <div className="relative overflow-hidden group banar-container hover-sweep-container">
-  <img
-    src={banar}
-    alt="Banner"
-    className="block w-full h-[350px] object-cover"
-  />
-  {/* sweeping white overlay */}
-  <span
-    className="
+          <div className="relative overflow-hidden group banar-container hover-sweep-container">
+            <img src={banar} alt="Banner" className="block w-full h-[350px] object-cover" />
+            {/* sweeping white overlay */}
+            <span
+              className="
       absolute inset-0
       w-[390%] h-[200%]
       bg-white opacity-40
@@ -129,19 +125,14 @@ const Slaider = () => {
       transition-transform duration-2000 ease-in-out
       pointer-events-none
     "
-  />
-</div>
+            />
+          </div>
 
-
-<div className="relative overflow-hidden group banar-container hover-sweep-container">
-  <img
-    src={campaign}
-    alt="Banner"
-    className="block w-full h-[350px] object-cover"
-  />
-  {/* sweeping white overlay */}
-  <span
-    className="
+          <div className="relative overflow-hidden group banar-container hover-sweep-container">
+            <img src={campaign} alt="Banner" className="block w-full h-[350px] object-cover" />
+            {/* sweeping white overlay */}
+            <span
+              className="
       absolute inset-0
       w-[390%] h-[200%]
       bg-white opacity-40
@@ -150,8 +141,8 @@ const Slaider = () => {
       transition-transform duration-2000 ease-in-out
       pointer-events-none
     "
-  />
-</div>
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,33 +1,26 @@
 import { Outlet } from "react-router-dom";
-import Slaider from "../Slaider/Slaider";
-import Navbar from "../Navbar/Navbar";
-import TopSection from "../TopSection/TopSection";
-import HeaderSearch from "../HeaderSearch/HeaderSearch";
 import Fashioncard from "../Fashioncard/Fashioncard";
+import HeaderSearch from "../HeaderSearch/HeaderSearch";
+import Navbar from "../Navbar/Navbar";
 import Navbar2 from "../Navbar2/Navbar2";
-import Navbar3 from "../Navbar3/Navbar3";
-import Navbar4 from "../Navbar4/Navbar4";
-
+import Slaider from "../Slaider/Slaider";
+import TopSection from "../TopSection/TopSection";
 
 const Mainleyaout = () => {
-    return (
-        <div>
-        <TopSection></TopSection>
-        <div className="w-11/12 mx-auto">
+  return (
+    <div>
+      <TopSection></TopSection>
+
+      <div className="container mx-auto">
         <Navbar></Navbar>
         <HeaderSearch></HeaderSearch>
         <Slaider></Slaider>
         <Fashioncard></Fashioncard>
         <Outlet></Outlet>
-        <div className="bg-gray-100 py-[100px]">
         <Navbar2></Navbar2>
-        </div>
-        <Navbar3></Navbar3>
-        <Navbar4></Navbar4>
-        </div>    
-        </div>
-
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Mainleyaout;

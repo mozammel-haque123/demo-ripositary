@@ -1,13 +1,13 @@
-import { useState, useRef } from "react";
-import { NavLink } from "react-router-dom";
-import { RiArrowDropDownLine, RiMenuLine, RiCloseLine } from "react-icons/ri";
+import { useRef, useState } from "react";
 import { GiSelfLove } from "react-icons/gi";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import navlogo from '../../assets/navlog.png';
-import Hover1 from '../Hover1/Hover1';
-import Hover2 from '../Hover2/Hover2';
-import news from '../../assets/removebg.png';
-import hot from '../../assets/hotyellow.png'
+import { RiArrowDropDownLine, RiCloseLine, RiMenuLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
+import hot from "../../assets/hotyellow.png";
+import navlogo from "../../assets/navlog.png";
+import news from "../../assets/removebg.png";
+import Hover1 from "../Hover1/Hover1";
+import Hover2 from "../Hover2/Hover2";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -25,6 +25,10 @@ const Navbar = () => {
   const blogsTimer = useRef(null);
   const galleryTimer = useRef(null);
 
+  // useEffect(() => {
+  //   fetch("/navbarbutton1.json").then((res) => res.json()
+  // }, []);
+
   // Handlers for desktop hover
   const handleEnter = (timerRef, setter) => {
     clearTimeout(timerRef.current);
@@ -35,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white mb-6 mt-8">
+    <nav className="bg-white mb-6 mt-8 relative border-red-500 border-2">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
@@ -49,16 +53,23 @@ const Navbar = () => {
             <div
               onMouseEnter={() => handleEnter(homeTimer, setOpenHome)}
               onMouseLeave={() => handleLeave(homeTimer, setOpenHome)}
-              className="relative"
+              className=""
             >
               <NavLink className="flex items-center font-bold hover:text-blue-600">
                 Home <RiArrowDropDownLine className="ml-1 text-2xl" />
               </NavLink>
+
               {openHome && (
-                <div className="absolute top-9 left-1/2 -translate-x-1/4 mt-2 bg-white p-4 rounded shadow-lg z-20">
+                <div className="absolute mt-2 w-full left-0 p-4 rounded shadow-lg z-20 flex justify-center">
                   <Hover1 />
                 </div>
               )}
+
+              {/* {openHome && (
+                <div className="absolute top-9 left-1/2 -translate-x-1/4 mt-2 bg-white p-4 rounded shadow-lg z-20">
+                  <Hover1 />
+                </div>
+              )} */}
             </div>
 
             {/* Pages and nested Products */}
@@ -119,8 +130,7 @@ const Navbar = () => {
                   </ul>
                 </div>
               )}
-             <img className="w-15 absolute -top-10 hidden md:block" src={news} alt="news" />
-
+              <img className="w-15 absolute -top-10 hidden md:block" src={news} alt="news" />
             </div>
 
             {/* Blogs */}
@@ -143,27 +153,31 @@ const Navbar = () => {
             </div>
 
             {/* Gallery */}
-              <div
+            <div
               onMouseEnter={() => handleEnter(galleryTimer, setGallery)}
               onMouseLeave={() => handleLeave(galleryTimer, setGallery)}
-              className="relative"
             >
               <NavLink className="flex items-center font-semibold hover:text-blue-600">
                 Gallery <RiArrowDropDownLine className="ml-1 text-2xl" />
               </NavLink>
+
               {openGallery && (
-                <div className="absolute top-full mt-2 lg:-left-[800px] md:-left-[550px] md:transform-none  lg:right-0 p-4 rounded shadow-lg z-20">
+                <div className="absolute mt-2 w-full left-0 z-20">
                   <Hover2 />
                 </div>
               )}
 
-               <img className="w-15 absolute -top-10 hidden md:block" src={hot} alt="news" />
+              <img className="w-15 absolute -top-10 hidden md:block" src={hot} alt="news" />
             </div>
 
             {/* Donate / Icons */}
-               <button className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600">Donate <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
+            <button className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600">
+              Donate{" "}
+              <RiArrowDropDownLine
+                className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
   "
-/> </button>
+              />{" "}
+            </button>
           </div>
 
           {/* Icons */}
@@ -174,7 +188,9 @@ const Navbar = () => {
             </div>
             <div className="relative">
               <MdOutlineShoppingBag className="text-4xl" />
-              <span className="absolute -top-1 -right-2 bg-amber-300 rounded-full w-4 h-4 text-xs text-white text-center">0</span>
+              <span className="absolute -top-1 -right-2 bg-amber-300 rounded-full w-4 h-4 text-xs text-white text-center">
+                0
+              </span>
             </div>
           </div>
 
@@ -184,127 +200,141 @@ const Navbar = () => {
               {mobileOpen ? <RiCloseLine className="text-2xl" /> : <RiMenuLine className="text-2xl" />}
             </button>
 
-           
-             <div className="flex items-center space-x-4 pt-2">
+            <div className="flex items-center space-x-4 pt-2">
               <div className="relative">
                 <GiSelfLove className="text-2xl" />
                 <span className="absolute -top-1 -right-2 bg-gray-200 rounded-full w-4 h-4 text-xs text-center">0</span>
               </div>
               <div className="relative">
                 <MdOutlineShoppingBag className="text-2xl" />
-                <span className="absolute -top-1 -right-2 bg-amber-300 rounded-full w-4 h-4 text-xs text-white text-center">0</span>
+                <span className="absolute -top-1 -right-2 bg-amber-300 rounded-full w-4 h-4 text-xs text-white text-center">
+                  0
+                </span>
               </div>
             </div>
-
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-4 pt-2 pb-4 space-y-1">
-            <button
-              onClick={() => setOpenHome(!openHome)}
-              className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
-            >
-              Home <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
-  "
-/>
-            </button>
-            {openHome && <Hover1 />}
 
-            <button
-              onClick={() => setOpenPages(!openPages)}
-              className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
-            >
-              Pages <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
+      <div
+        className={`border-2 border-amber-500 w-[320px] transform fixed top-[120px] left-0 z-50 bg-white ${
+          !mobileOpen ? "-translate-x-[320px]" : ""
+        } transition ease-in-out duration-300`}
+      >
+        <div className="px-4 pt-2 pb-4 space-y-1">
+          <button
+            onClick={() => setOpenHome(!openHome)}
+            className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
+          >
+            Home{" "}
+            <RiArrowDropDownLine
+              className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
   "
-/>
-            </button>
-            {openPages && (
-              <ul className="pl-4 space-y-1">
-                <li className="py-1 hover:text-blue-600">About Us</li>
-                <li className="py-1 hover:text-blue-600">Contact</li>
-                <li className="py-1 hover:text-blue-600">FAQ</li>
-                <li className="py-1 hover:text-blue-600">Terms & Conditions</li>
-                <li>
-                  <button
-                    onClick={() => setProducts(!openProducts)}
-                    className="flex items-center justify-between w-full py-1"
-                  >
-                    Products <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
+            />
+          </button>
+          {openHome && <Hover1 />}
+
+          <button
+            onClick={() => setOpenPages(!openPages)}
+            className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
+          >
+            Pages{" "}
+            <RiArrowDropDownLine
+              className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
+  "
+            />
+          </button>
+          {openPages && (
+            <ul className="pl-4 space-y-1">
+              <li className="py-1 hover:text-blue-600">About Us</li>
+              <li className="py-1 hover:text-blue-600">Contact</li>
+              <li className="py-1 hover:text-blue-600">FAQ</li>
+              <li className="py-1 hover:text-blue-600">Terms & Conditions</li>
+              <li>
+                <button
+                  onClick={() => setProducts(!openProducts)}
+                  className="flex items-center justify-between w-full py-1"
+                >
+                  Products{" "}
+                  <RiArrowDropDownLine
+                    className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
   hover:text-blue-600"
-/>
-                  </button>
-                  {openProducts && (
-                    <ul className="pl-4 space-y-1">
-                      <li className="hover:text-blue-600">Category 1</li>
-                      <li className="hover:text-blue-600">Category 2</li>
-                    </ul>
-                  )}
-                </li>
-              </ul>
-            )}
+                  />
+                </button>
+                {openProducts && (
+                  <ul className="pl-4 space-y-1">
+                    <li className="hover:text-blue-600">Category 1</li>
+                    <li className="hover:text-blue-600">Category 2</li>
+                  </ul>
+                )}
+              </li>
+            </ul>
+          )}
 
-            <button
-              onClick={() => setShop(!openShop)}
-              className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
-            >
-              Shop <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
+          <button
+            onClick={() => setShop(!openShop)}
+            className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
+          >
+            Shop{" "}
+            <RiArrowDropDownLine
+              className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
   "
-/>
-            </button>
-            {openShop && (
-              <ul className="pl-4 space-y-1">
-                <li className="hover:text-blue-600">Shop</li>
-                <li className="hover:text-blue-600">Product Details</li>
-              </ul>
-            )}
+            />
+          </button>
+          {openShop && (
+            <ul className="pl-4 space-y-1">
+              <li className="hover:text-blue-600">Shop</li>
+              <li className="hover:text-blue-600">Product Details</li>
+            </ul>
+          )}
 
-            <button
-              onClick={() => setBlogs(!openBlogs)}
-              className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
-            >
-              Blogs <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
+          <button
+            onClick={() => setBlogs(!openBlogs)}
+            className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
+          >
+            Blogs{" "}
+            <RiArrowDropDownLine
+              className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
   "
-/>
-            </button>
-            {openBlogs && (
-              <ul className="pl-4 space-y-1">
-                <li className="hover:text-blue-600">Blog</li>
-                <li className="hover:text-blue-600">Single Blog</li>
-              </ul>
-            )}
+            />
+          </button>
+          {openBlogs && (
+            <ul className="pl-4 space-y-1">
+              <li className="hover:text-blue-600">Blog</li>
+              <li className="hover:text-blue-600">Single Blog</li>
+            </ul>
+          )}
 
-            <button
-              onClick={() => setGallery(!openGallery)}
-              className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
-            >
-              Gallery <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
+          <button
+            onClick={() => setGallery(!openGallery)}
+            className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600"
+          >
+            Gallery{" "}
+            <RiArrowDropDownLine
+              className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
   "
-/>
-            </button>
-            {openGallery && <Hover2 />}
+            />
+          </button>
+          {openGallery && <Hover2 />}
 
-            <button className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600">Donate <RiArrowDropDownLine className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0        
+          <button className="w-full text-left py-2 flex items-center justify-between font-semibold hover:text-blue-600">
+            Donate{" "}
+            <RiArrowDropDownLine
+              className="text-2xl border-1 rounded-full sm:border sm:border-gray-300 md:border-0
   "
-/> </button>
-          </div>
+            />{" "}
+          </button>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
 
-
-
-
-
-
-// // 
+// //
 
 // import { RiArrowDropDownLine } from "react-icons/ri";
 // import { NavLink } from "react-router-dom";
@@ -362,7 +392,7 @@ export default Navbar;
 //       setProducts(false);
 //     }, 100);
 //   };
-  
+
 //   const handleShopEnter = () => {
 //     clearTimeout(ProductsTimer.current);
 //     setShop(true);
@@ -396,11 +426,9 @@ export default Navbar;
 //     }, 100);
 //   };
 
-
-
 //     return (
 //  <div className="my-6">
-     
+
 //     <div className="flex justify-between items-center">
 //      <div>
 //     <img src={navlogo} alt="" />
@@ -433,7 +461,7 @@ export default Navbar;
 //  onMouseLeave={handlePagesLeave}
 //   className="relative"
 // >
-//  <NavLink  className={'btn hover:text-blue-600 font-bold'}>Pages <RiArrowDropDownLine className="text-3xl" /> </NavLink> 
+//  <NavLink  className={'btn hover:text-blue-600 font-bold'}>Pages <RiArrowDropDownLine className="text-3xl" /> </NavLink>
 
 //   <div
 //     className={`absolute top-9 left-1/2 -translate-x-1/4 mt-2 bg-white p-4 rounded shadow z-50 ${
@@ -468,12 +496,10 @@ export default Navbar;
 //   </div>
 // </div></li>
 
-
 //    </ul>
 //   </div>
 // </div>
 //  {/* Pages end */}
-
 
 //    {/* Shop satar */}
 // <div
@@ -482,7 +508,7 @@ export default Navbar;
 
 //   className="relative"
 // >
-//  <NavLink  className={'btn hover:text-blue-600 font-bold'}>Shop <RiArrowDropDownLine className="text-3xl" /> </NavLink> 
+//  <NavLink  className={'btn hover:text-blue-600 font-bold'}>Shop <RiArrowDropDownLine className="text-3xl" /> </NavLink>
 
 //   <div
 //     className={`absolute top-9 left-1/2 -translate-x-1/4 mt-2 bg-white p-4 rounded shadow z-50 ${
@@ -505,7 +531,7 @@ export default Navbar;
 
 //   className="relative"
 // >
-// <NavLink className={'btn hover:text-blue-600 font-bold'}>Blogs <RiArrowDropDownLine className="text-3xl" /> </NavLink> 
+// <NavLink className={'btn hover:text-blue-600 font-bold'}>Blogs <RiArrowDropDownLine className="text-3xl" /> </NavLink>
 
 //   <div
 //     className={`absolute top-9 left-1/2 -translate-x-1/4 mt-2 bg-white p-4 rounded shadow z-50 ${
@@ -520,7 +546,6 @@ export default Navbar;
 // </div>
 //    {/* Blogs end */}
 
- 
 //     {/* Gallery satar */}
 // <div
 //    onMouseEnter={handleGalleryEnter}
@@ -540,10 +565,9 @@ export default Navbar;
 // </div>
 //    {/* Gallery end */}
 
-
-//  <NavLink  className={'btn hover:text-blue-600 font-bold'}>Doakn <RiArrowDropDownLine className="text-3xl" /> </NavLink> 
+//  <NavLink  className={'btn hover:text-blue-600 font-bold'}>Doakn <RiArrowDropDownLine className="text-3xl" /> </NavLink>
 //     </div>
-    
+
 //     <div className="flex gap-4">
 //      <div className="relative">
 //     <GiSelfLove className="text-4xl" />
@@ -561,4 +585,4 @@ export default Navbar;
 // };
 
 // export default Navbar;
-// // 
+// //
