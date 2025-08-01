@@ -1,0 +1,22 @@
+[
+  {
+    "id": "projector",
+    "label": "Projector"
+  },
+  {
+    "id": "light",
+    "label": "Light"
+  },
+  {
+    "id": "laptop",
+    "label": "Laptop"
+  },
+  {
+    "id": "headphone",
+    "label": "Headphone"
+  },
+  {
+    "id": "googleGlass",
+    "label": "Google Glass"
+  }
+]

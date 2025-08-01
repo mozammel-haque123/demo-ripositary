@@ -1,0 +1,72 @@
+{
+  "projector": [
+    { "id": "projector-1",  "name": "Projector",   "image": "https://i.ibb.co/qMdrcdnC/01-1.png",  "price": 120.00, "oldPrice": 150.00, "rating": 4.2 },
+    { "id": "projector-2",  "name": "Projector",   "image": "https://i.ibb.co/0RWN9zbY/07-300x300-1-1.jpg",  "price": 110.00, "oldPrice": 140.00, "rating": 4.0 },
+    { "id": "projector-3",  "name": "Projector",   "image": "https://i.ibb.co/0Rw6jWPz/08-2.png",  "price": 130.00, "rating": 4.5 },
+    { "id": "projector-4",  "name": "Projector",   "image": "https://i.ibb.co/TB4PfPtk/21-1.png",  "price": 140.00, "oldPrice": 170.00 },
+    { "id": "projector-5",  "name": "Projector",   "image": "https://i.ibb.co/V0hgzw40/24-1.png",  "price": 125.00, "rating": 3.9 },
+    { "id": "projector-6",  "name": "Projector",   "image": "https://i.ibb.co/LXbF6X2x/36-2.png",  "price": 135.00 },
+    { "id": "projector-7",  "name": "Projector",   "image": "https://i.ibb.co/FL802KgS/Bluetooth-Headphones-Wireless-Stereo-Headset-1.jpg",  "price": 150.00, "oldPrice": 180.00, "rating": 4.1 },
+    { "id": "projector-8",  "name": "Projector",   "image": "https://i.ibb.co/7dQFFCMc/Bluetooth-Smart-Projector-1.jpg",  "price": 145.00 },
+    { "id": "projector-9",  "name": "Projector",   "image": "https://i.ibb.co/qYVwfLgr/camera-drone-1.png",  "price": 155.00, "rating": 4.4 },
+    { "id": "projector-10", "name": "Projector",  "image": "https://i.ibb.co/Vk6gqYd/Cannon-2-Mini-Smart-Bluetooth-1.png", "price": 160.00, "oldPrice": 200.00 },
+    { "id": "projector-11", "name": "Projector",  "image": "https://i.ibb.co/GfD7vNzV/iphone7-1.png", "price": 170.00, "rating": 4.6 },
+    { "id": "projector-12", "name": "Projector",  "image": "https://i.ibb.co/WW0t0y5v/WIFI-FPV-With-720-P-Camera-High-Hold-Foldable-Drones-1.jpg", "price": 180.00 }
+  ],
+  "light": [
+    { "id": "light-1",   "name": "Light",    "image": "https://i.ibb.co/qMdrcdnC/01-1.png",   "price": 25.00 },
+    { "id": "light-2",   "name": "Light",    "image": "https://i.ibb.co/0RWN9zbY/07-300x300-1-1.jpg",   "price": 30.00,   "oldPrice": 35.00 },
+    { "id": "light-3",   "name": "Light",    "image": "https://i.ibb.co/0Rw6jWPz/08-2.png",   "price": 28.00,   "rating": 4.0 },
+    { "id": "light-4",   "name": "Light",    "image": "https://i.ibb.co/TB4PfPtk/21-1.png",   "price": 32.00 },
+    { "id": "light-5",   "name": "Light",    "image": "https://i.ibb.co/V0hgzw40/24-1.png",   "price": 27.50,  "oldPrice": 30.00 },
+    { "id": "light-6",   "name": "Light",    "image": "https://i.ibb.co/FL802KgS/Bluetooth-Headphones-Wireless-Stereo-Headset-1.jpg",   "price": 29.00 },
+    { "id": "light-7",   "name": "Light",    "image": "https://i.ibb.co/4wqNHMBK/BQ-615-Colorful-LED-Lights-Portable-Bluetooth-Speakers-1.jpg",   "price": 31.00,   "rating": 4.3 },
+    { "id": "light-8",   "name": "Light",    "image": "https://i.ibb.co/qYVwfLgr/camera-drone-1.png",   "price": 26.00 },
+    { "id": "light-9",   "name": "Light",    "image": "https://i.ibb.co/Vk6gqYd/Cannon-2-Mini-Smart-Bluetooth-1.png",   "price": 33.00 },
+    { "id": "light-10",  "name": "Light",   "image": "https://i.ibb.co/bRRnyvx6/HTB1olbtml-DH8-KJj-1.jpg",  "price": 34.00,  "oldPrice": 40.00 },
+    { "id": "light-11",  "name": "Light",   "image": "https://i.ibb.co/GfD7vNzV/iphone7-1.png",  "price": 24.00,  "rating": 3.8 },
+    { "id": "light-12",  "name": "Light",   "image": "https://i.ibb.co/WW0t0y5v/WIFI-FPV-With-720-P-Camera-High-Hold-Foldable-Drones-1.jpg",  "price": 35.00 }
+  ],
+  "laptop": [
+    { "id": "laptop-1",  "name": "Laptop",   "image": "https://i.ibb.co/qMdrcdnC/01-1.png",  "price": 799.00, "rating": 4.5 },
+    { "id": "laptop-2",  "name": "Laptop",   "image": "https://i.ibb.co/XrnMt7RB/d9c9ca3071f052121f8c70ccd8b0e89b.jpg",  "price": 850.00 },
+    { "id": "laptop-3",  "name": "Laptop",   "image": "https://i.ibb.co/Dfy4JnVv/32d73581368cd654a842c18d8c22f58b.jpg",  "price": 780.00, "oldPrice": 900.00 },
+    { "id": "laptop-4",  "name": "Laptop",   "image": "https://i.ibb.co/HTRqfBp4/b433665a58737f463eefc189988c3236.jpg",  "price": 820.00 },
+    { "id": "laptop-5",  "name": "Laptop",   "image": "https://i.ibb.co/4qSDGsw/8f5107f299c647e0b9c855540024e91a.jpg",  "price": 770.00 },
+    { "id": "laptop-6",  "name": "Laptop",   "image": "https://i.ibb.co/twvbBt7S/5baaeb360de9515183217628ac65f41f.jpg",  "price": 830.00, "rating": 4.2 },
+    { "id": "laptop-7",  "name": "Laptop",   "image": "https://i.ibb.co/SXrfKPtR/c5a3aec374f8676898dcaf5a516c1daa.jpg",  "price": 810.00 },
+    { "id": "laptop-8",  "name": "Laptop",   "image": "https://i.ibb.co/JRw8TMNY/c58800c280a818d8540426f13bcb35c4.jpg",  "price": 790.00 },
+    { "id": "laptop-9",  "name": "Laptop",   "image": "https://i.ibb.co/Kp3dgQg2/e2ec1376b14ed100b3c2c009b6a62942.jpg",  "price": 860.00, "oldPrice": 950.00 },
+    { "id": "laptop-10", "name": "Laptop",  "image": "https://i.ibb.co/6RkFrrdB/0c9ed4627fca6ee7c0f47d724dbfb9ca.jpg", "price": 875.00 },
+    { "id": "laptop-11", "name": "Laptop",  "image": "https://i.ibb.co/274tmD1n/9dd9ce7bf05711781bbc6a68adad5cca.jpg", "price": 840.00, "rating": 4.4 },
+    { "id": "laptop-12", "name": "Laptop",  "image": "https://i.ibb.co/SXrfKPtR/c5a3aec374f8676898dcaf5a516c1daa.jpg", "price": 800.00 }
+  ],
+  "headphone": [
+    { "id": "headphone-1",  "name": "Headphone",  "image": "https://i.ibb.co/FL802KgS/Bluetooth-Headphones-Wireless-Stereo-Headset-1.jpg", "price": 45.00 },
+    { "id": "headphone-2",  "name": "Headphone",  "image": "https://i.ibb.co/v6L5pLxh/02ce16a94818aa12688873a8ce35deba.jpg", "price": 50.00, "rating": 4.1 },
+    { "id": "headphone-3",  "name": "Headphone",  "image": "https://i.ibb.co/JcywSdv/download-1.jpg", "price": 40.00, "oldPrice": 55.00 },
+    { "id": "headphone-4",  "name": "Headphone",  "image": "https://i.ibb.co/RBL1y26/download-2.jpg", "price": 48.00 },
+    { "id": "headphone-5",  "name": "Headphone",  "image": "https://i.ibb.co/GpvmgJs/images.jpg", "price": 52.00 },
+    { "id": "headphone-6",  "name": "Headphone",  "image": "https://i.ibb.co/Z2nn4ff/images-1.jpg", "price": 47.00, "rating": 3.9 },
+    { "id": "headphone-7",  "name": "Headphone",  "image": "https://i.ibb.co/CKVk4L3/images-2.jpg", "price": 53.00 },
+    { "id": "headphone-8",  "name": "Headphone",  "image": "https://i.ibb.co/Kz5NYNnX/49-300x300-1-1.jpg", "price": 49.00 },
+    { "id": "headphone-9",  "name": "Headphone",  "image": "https://i.ibb.co/XrdB4stD/51-1.png", "price": 56.00, "oldPrice": 65.00 },
+    { "id": "headphone-10", "name": "Headphone", "image": "https://i.ibb.co/35JLRm9v/DEEP-BASS-Headphones-Earphones-3-5mm-AUX-Foldable-Portable-Adjustable-Gaming-Headset-For-Phones-MP3.jpg","price": 60.00 },
+    { "id": "headphone-11", "name": "Headphone", "image": "https://i.ibb.co/xSBzCrCg/DEEP-BASS-Headphones-Earphones-3-5mm-AUX-Foldable-Portable-Adjustable-Gaming-Headset-For-Phones-MP3.jpg","price": 58.00, "rating": 4.3 },
+    { "id": "headphone-12", "name": "Headphone", "image": "https://i.ibb.co/FL802KgS/Bluetooth-Headphones-Wireless-Stereo-Headset-1.jpg","price": 55.00 }
+  ],
+  "googleGlass": [
+    { "id": "gglass-1",  "name": "Google Glass",         "image": "https://i.ibb.co/Kz5NYNnX/49-300x300-1-1.jpg",  "price": 220.00 },
+    { "id": "gglass-2",  "name": "Google Glass",        "image": "https://i.ibb.co/V0hgzw40/24-1.png",  "price": 660.00,  "oldPrice": 690.00 },
+    { "id": "gglass-3",  "name": "Google Glass",        "image": "https://i.ibb.co/TB4PfPtk/21-1.png",  "price": 299.00 },
+    { "id": "gglass-4",  "name": "Google Glass",    "image": "https://i.ibb.co/Vk6gqYd/Cannon-2-Mini-Smart-Bluetooth-1.png",  "price": 70.00 },
+    { "id": "gglass-5",  "name": "Google Glass",              "image": "https://i.ibb.co/0Rw6jWPz/08-2.png",  "price": 210.00,  "oldPrice": 240.00 },
+    { "id": "gglass-6",  "name": "Google Glass",          "image": "https://i.ibb.co/0RWN9zbY/07-300x300-1-1.jpg",  "price": 230.00 },
+    { "id": "gglass-7",  "name": "Google Glass",         "image": "https://i.ibb.co/qMdrcdnC/01-1.png",  "price": 125.00,  "rating": 5.0 },
+    { "id": "gglass-8",  "name": "Google Glass",  "image": "https://i.ibb.co/GfD7vNzV/iphone7-1.png",  "price": 125.00 },
+    { "id": "gglass-9",  "name": "Google Glass",         "image": "https://i.ibb.co/FL802KgS/Bluetooth-Headphones-Wireless-Stereo-Headset-1.jpg",  "price": 16.00 },
+    { "id": "gglass-10", "name": "Google Glass",           "image": "https://i.ibb.co/qYVwfLgr/camera-drone-1.png", "price": 540.00,  "oldPrice": 720.00 },
+    { "id": "gglass-11", "name": "Google Glass",       "image": "https://i.ibb.co/WW0t0y5v/WIFI-FPV-With-720-P-Camera-High-Hold-Foldable-Drones-1.jpg", "price": 540.00,  "oldPrice": 720.00 },
+    { "id": "gglass-12", "name": "Google Glass",            "image": "https://i.ibb.co/LXbF6X2x/36-2.png", "price": 245.00,  "rating": 4.0 }
+  ]
+}

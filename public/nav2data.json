@@ -1,0 +1,119 @@
+[
+  {
+    "id": "tab1",
+    "label": "16% Off",
+    "items": [
+      {
+        "id": "watch-1",
+        "name": "Luxury Watch",
+        "image": "https://i.ibb.co/PZKwGhLJ/3-D-VR-Glass-Virtual-Reality-1.jpg",
+        "oldPrice": 640.00,
+        "price": 540.00,
+        "rating": 4.2,
+        "sold": 25,
+        "available": 27,
+        "offerEnds": "2025-08-05T00:00:00Z"
+      },
+      {
+        "id": "watch-2",
+        "name": "Classic Chrono Watch",
+        "image": "https://i.ibb.co/h1cRFNgg/15-6-Core-i7-3517-U-Netbook-with-bluetooth-wifi-HDMI-VGA-Laptop-Computer-4-M-Cache-Intel-1.jpg",
+        "oldPrice": 550.00,
+        "price": 467.50,
+        "rating": 4.0,
+        "sold": 40,
+        "available": 10,
+        "offerEnds": "2025-08-07T00:00:00Z"
+      },
+      {
+        "id": "watch-3",
+        "name": "Elegant Leather Strap Watch",
+        "image": "https://i.ibb.co/bRWdGPy3/Brand-Luxury-Men-Watches-Men-Quartz-1.jpg",
+        "oldPrice": 300.00,
+        "price": 255.00,
+        "rating": 4.5,
+        "sold": 60,
+        "available": 5,
+        "offerEnds": "2025-08-03T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "tab2",
+    "label": "25% Off",
+    "items": [
+      {
+        "id": "watch-4",
+        "name": "Sports Digital Watch",
+        "image": "https://i.ibb.co/rKwhqbNQ/Licence-Windows10-13-3-VOYO-VBOOK-V3-Pro-Celeron-N3450-Tablet-PC-Laptop-with-8-G-RAM-128-G-1-1.jpg",
+        "oldPrice": 200.00,
+        "price": 170.00,
+        "rating": 3.8,
+        "sold": 80,
+        "available": 20,
+        "offerEnds": "2025-08-10T00:00:00Z"
+      },
+      {
+        "id": "watch-5",
+        "name": "Minimalist Steel Watch",
+        "image": "https://i.ibb.co/jk8yGMVb/Watch-Women-Quartz-Watches-1.jpg",
+        "oldPrice": 480.00,
+        "price": 408.00,
+        "rating": 4.1,
+        "sold": 30,
+        "available": 15,
+        "offerEnds": "2025-08-09T00:00:00Z"
+      },
+      {
+        "id": "watch-6",
+        "name": "Vintage Mechanical Watch",
+        "image": "https://i.ibb.co/WW0t0y5v/WIFI-FPV-With-720-P-Camera-High-Hold-Foldable-Drones-1.jpg",
+        "oldPrice": 720.00,
+        "price": 612.00,
+        "rating": 4.6,
+        "sold": 50,
+        "available": 8,
+        "offerEnds": "2025-08-06T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "tab3",
+    "label": "33% Off",
+    "items": [
+      {
+        "id": "watch-7",
+        "name": "Smart Fitness Watch",
+        "image": "https://i.ibb.co/qYVwfLgr/camera-drone-1.png",
+        "oldPrice": 210.00,
+        "price": 178.50,
+        "rating": 4.3,
+        "sold": 100,
+        "available": 12,
+        "offerEnds": "2025-08-04T00:00:00Z"
+      },
+      {
+        "id": "watch-8",
+        "name": "Automatic Tourbillon Watch",
+        "image": "https://i.ibb.co/5VP6Wh7/bc0299b6dac55dc434a6bbe95c7c591f.jpg",
+        "oldPrice": 1500.00,
+        "price": 1275.00,
+        "rating": 4.8,
+        "sold": 5,
+        "available": 2,
+        "offerEnds": "2025-08-08T00:00:00Z"
+      },
+      {
+        "id": "watch-9",
+        "name": "Solar Powered Watch",
+        "image": "https://i.ibb.co/NhJ28R9/51ba99e4856655fa06b40149d5e7ea6d.jpg",
+        "oldPrice": 350.00,
+        "price": 297.50,
+        "rating": 4.0,
+        "sold": 45,
+        "available": 18,
+        "offerEnds": "2025-08-11T00:00:00Z"
+      }
+    ]
+  }
+]
